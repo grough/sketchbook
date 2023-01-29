@@ -4,3 +4,4 @@ modes
 templates
 tools
 .DS_Store
+*.autosave

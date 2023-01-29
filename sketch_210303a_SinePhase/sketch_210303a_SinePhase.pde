@@ -33,3 +33,8 @@ void mouseClicked() {
   println(file);
   loop();
 }
+
+String stamp() {
+  Date d = new Date();
+  return d.getTime() + "-" + millis();
+}

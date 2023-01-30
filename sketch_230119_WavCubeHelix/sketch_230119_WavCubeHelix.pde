@@ -30,18 +30,15 @@ void draw() {
     t = 0;
   }
 
-  w.setRange(t, 64);
+  w.setRange(t, 1024);
   int i = 0;
   for (int row = 0; row < height; row++) {
     for (int col = 0; col < width; col++) {
-
       float x = col / float(height) * 2 - 1;
       float y = row / float(height) * 2 - 1;
       float d = sqrt(x * x + y * y);
-      //fill(int(255 * w.scan(d, 1)));
-      //stroke(int(255 * w.scan(d, 1)));
 
-      float ww = w.scan(d, 1);
+      float ww = w.scan(pow(d / 1, 1.0), 1);
       //float www = ww;
       float www = sig(ww * .5, 16);
       //float wwww = www / 2 + 0.5;
@@ -59,7 +56,7 @@ void draw() {
       //int ss = 8;
       //int[] cs =  h.array(ss);
       //cs[(int)Math.floor(wwww * 16)];
-      stroke(h.color(wwww + noise(i + t) / 20));
+      stroke(h.color(wwww + noise(i + t) / 16));
       //stroke(cs[(int)Math.floor(wwww * ss)]);
       point(col, row);
       i++;

@@ -4,10 +4,14 @@ precision highp int;
 #endif
 
 uniform vec2 resolution;
+uniform float start;
+uniform float rotations;
+uniform float hue;
+uniform float gamma;
 
 const float PI = 3.1415926535897932384626433832795;
 
-vec4 cubehelix(float x, float start, float rotations, float hue, float gamma) {
+vec4 cubehelix(float x) {
     float angle = 2 * PI * (start / 3.0 + 1 + rotations * x);
     x = pow(x, gamma);
     float amp = hue * x * (1 - x) / 2.0;
@@ -18,6 +22,6 @@ vec4 cubehelix(float x, float start, float rotations, float hue, float gamma) {
 }
 
 void main() {
-    gl_FragColor = cubehelix(gl_FragCoord.x / resolution.x, 0.5, 1.5, 1.0, 1.0);
+    gl_FragColor = cubehelix(gl_FragCoord.x / resolution.x);
 }
 

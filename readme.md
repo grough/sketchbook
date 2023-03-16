@@ -11,7 +11,15 @@
 <tr> -->
 <tr>
 <td>
-<!-- <img src="sketch_230119_WavCubeHelix/output/sample.png" /> -->
+</td>
+<td><a href="sketch_230314b_OblateRings/">sketch_230314b_OblateRings</a></td>
+<td>Draw rings using trig functions with controls for rotation and oblateness</td>
+</td>
+<tr>
+<tr>
+<tr>
+<tr>
+<td>
 </td>
 <td><a href="sketch_230130b_ShaderWave/">sketch_230130b_ShaderWave</a></td>
 <td>Render audio data in with a shader</td>
@@ -20,7 +28,6 @@
 <tr>
 <tr>
 <td>
-<!-- <img src="sketch_230119_WavCubeHelix/output/sample.png" /> -->
 </td>
 <td><a href="sketch_230119_WavCubeHelix/">sketch_230129a_Shader</a></td>
 <td>My first try rendering a shader</td>
@@ -28,7 +35,6 @@
 <tr>
 <tr>
 <td>
-<!-- <img src="sketch_230119_WavCubeHelix/output/sample.png" /> -->
 </td>
 <td><a href="sketch_230119_WavCubeHelix/">sketch_230119_WavCubeHelix</a></td>
 <td>Draw parts of an audio file</td>
@@ -37,7 +43,6 @@
 <tr>
 <tr>
 <td>
-<!-- <img src="sketch_210303a_SinePhase/output/sample.png" /> -->
 </td>
 <td><a href="sketch_210303a_SinePhase/">sketch_210303a_SinePhase</a></td>
 <td>Draw sine waves</td>

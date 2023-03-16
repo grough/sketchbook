@@ -30,19 +30,20 @@ void draw() {
     t = 0;
   }
 
-  w.setRange(t, 1024);
+  w.setRange(t, 256);
   int i = 0;
   for (int row = 0; row < height; row++) {
     for (int col = 0; col < width; col++) {
       float x = col / float(height) * 2 - 1;
       float y = row / float(height) * 2 - 1;
       float d = sqrt(x * x + y * y);
-
-      float ww = w.scan(pow(d / 1, 1.0), 1);
-      //float www = ww;
-      float www = sig(ww * .5, 16);
-      //float wwww = www / 2 + 0.5;
-      float wwww = www;
+      float a = atan2(y, x);
+      
+      float radial = w.scan(a / TWO_PI + 0.5, 1) / 2 + 0.5;
+      float distance = w.scan(d / 1.414, 1);
+      
+      float z = sig(radial * 1, 1) * 2 + sig(distance * 4, 1);
+      
 
       h
         .start(gui.getValue("start"))
@@ -50,18 +51,12 @@ void draw() {
         .hue(gui.getValue("hue"))
         .gamma(gui.getValue("gamma"));
 
-      //h.rotations(0 + pow(1- d, 2) * 4.5);
-      //h.hue(pow(d, 1));
-      //h.gamma((d * 2 + 0) * 1);
-      //int ss = 8;
-      //int[] cs =  h.array(ss);
-      //cs[(int)Math.floor(wwww * 16)];
-      stroke(h.color(wwww + noise(i + t) / 16));
-      //stroke(cs[(int)Math.floor(wwww * ss)]);
+      stroke(h.color(z + noise(i + t) / 16));
       point(col, row);
       i++;
     }
   }
+  //saver.save("png");
 
   t+= 64;
 }

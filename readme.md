@@ -9,23 +9,32 @@
 <th>Description</th>
 <th>Output Sample</th>
 <tr> -->
+
+<tr>
+<td>
+</td>
+<td><a href="sketch_230325a_PrintPaperMetric/">sketch_230325a_PrintPaperMetric</a></td>
+<td>Manage different sets of image sizes for screen and print</td>
+</td>
+</tr>
+
 <tr>
 <td>
 </td>
 <td><a href="sketch_230314b_OblateRings/">sketch_230314b_OblateRings</a></td>
 <td>Draw rings using trig functions with controls for rotation and oblateness</td>
 </td>
-<tr>
-<tr>
-<tr>
+</tr>
+
 <tr>
 <td>
 </td>
 <td><a href="sketch_230130b_ShaderWave/">sketch_230130b_ShaderWave</a></td>
 <td>Render audio data in with a shader</td>
 </td>
-<tr>
-<tr>
+</tr>
+
+
 <tr>
 <td>
 </td>
@@ -33,6 +42,7 @@
 <td>My first try rendering a shader</td>
 </td>
 <tr>
+
 <tr>
 <td>
 </td>
@@ -40,7 +50,7 @@
 <td>Draw parts of an audio file</td>
 </td>
 <tr>
-<tr>
+
 <tr>
 <td>
 </td>
@@ -48,6 +58,7 @@
 <td>Draw sine waves</td>
 </td>
 <tr>
+
 </tbody>
 </table>
 

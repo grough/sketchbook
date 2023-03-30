@@ -13,6 +13,14 @@
 <tr>
 <td>
 </td>
+<td><a href="sketch_230330d_PaperShader/">sketch_230330d_PaperShader</a></td>
+<td>Render a high resolution shader off-screen and display it at normal screen resolution</td>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
 <td><a href="sketch_230325a_PrintPaperMetric/">sketch_230325a_PrintPaperMetric</a></td>
 <td>Manage different sets of image sizes for screen and print</td>
 </td>

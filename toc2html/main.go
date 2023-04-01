@@ -11,9 +11,10 @@ import (
 )
 
 type Entry struct {
-	Name        string
-	Description string
-	Image       string
+	Name           string
+	Description    string
+	ImagePath      string
+	SmallImagePath string
 }
 
 func main() {
@@ -54,7 +55,8 @@ func Extract(srcDir string) ([]Entry, error) {
 		// Construct the path to the sketch file and image file
 		sketchDir := filepath.Join(sketchbookDir, file.Name())
 		sketchFile := filepath.Join(sketchDir, file.Name()+".pde")
-		imageFile := filepath.Join(sketchDir, "example.png")
+		imagePath := filepath.Join(sketchDir, "example.png")
+		smallImagePath := filepath.Join(sketchDir, "example-small.png")
 
 		// Read the contents of the sketch file
 		contents, err := ioutil.ReadFile(sketchFile)
@@ -80,16 +82,18 @@ func Extract(srcDir string) ([]Entry, error) {
 		}
 
 		// Check if the image file exists
-		_, err = os.Stat(imageFile)
-		var image string
+		_, err = os.Stat(smallImagePath)
+		var smallImage, image string
 		if err == nil {
-			image = imageFile
+			smallImage = smallImagePath
+			image = imagePath
 		} else {
+			smallImage = ""
 			image = ""
 		}
 
 		// Add the title, description, and image to the sketches collection
-		entries = append(entries, Entry{file.Name(), description, image})
+		entries = append(entries, Entry{file.Name(), description, image, smallImage})
 	}
 
 	return entries, nil
@@ -100,11 +104,13 @@ func Format(entries []Entry) (string, error) {
   <tr>
     <th>Name</th>
     <th>Description</th>
+	<th>👁️</th>
   </tr>
   {{range .}}
   <tr>
     <td><a href="{{.Name}}/">{{.Name}}</a></td>
     <td>{{.Description}}</td>
+    <td>{{if eq .SmallImagePath ""}}<!--no image-->{{else}}<a href="{{.Name}}/example.png"><img src="{{.Name}}/example-small.png" /></a>{{end}}</td>
   </tr>
   {{end}}
 </table>`)

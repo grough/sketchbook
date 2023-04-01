@@ -13,22 +13,23 @@ class Saver {
     session = now.format(formatter);
   }
   
-  String filename(String extension) {
+  String filename(String extension, String[] tags) {
     String index = nf(i, 4);
     String sketchName = sketch.toString().split("@")[0];
-    String name = session + "_" + index + "_" + sketchName;
+    String tagsString = String.join("_", tags);
+    String name = session + "_" + tagsString + "_" + index + "_" + sketchName;
     return name + "." + extension;
   }
   
-  String save(String extension) {
-    String filename = this.filename(extension);
+  String save(String extension, String[] tags) {
+    String filename = this.filename(extension, tags);
     sketch.save("output/" + filename);
     i++;
     return filename;
   }
   
-  String save(String extension, PGraphics graphics) {
-    String filename = this.filename(extension);
+  String save(String extension, String[] tags, PGraphics graphics) {
+    String filename = this.filename(extension, tags);
     graphics.save("output/" + filename);
     i++;
     return filename;

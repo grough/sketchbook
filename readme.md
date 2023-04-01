@@ -15,6 +15,14 @@
 <tr>
 <td>
 </td>
+<td><a href="sketch_230331b_RingGradientMaskLayers/">sketch_230331b_RingGradientMaskLayers</a></td>
+<td>Render multiple circular alpha masks as separate layers</td>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
 <td><a href="sketch_230331a_ThreePetalRings/">sketch_230331a_ThreePetalRings</a></td>
 <td>Render multiple alpha mask layers in high resolution</td>
 </td>

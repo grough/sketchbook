@@ -35,7 +35,7 @@
   
   <tr>
     <td><a href="sketch_230314b_OblateRings/">sketch_230314b_OblateRings</a></td>
-    <td>Draw rings using trig functions with controls for rotation and oblateness</td>
+    <td>Draw rings using trig functions</td>
     <td><!--no image--></td>
   </tr>
   
@@ -58,8 +58,6 @@
   </tr>
   
 </table>
-
-
 
 ## Notes
 

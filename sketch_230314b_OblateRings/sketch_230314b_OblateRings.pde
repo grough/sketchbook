@@ -1,4 +1,4 @@
-//Draw rings using trig functions with controls for rotation and oblateness
+//Draw rings using trig functions
 Saver saver;
 
 Hand h1;

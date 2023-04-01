@@ -4,17 +4,27 @@
 
 <table>
 <tbody>
-<!-- <tr>
+<!--
+<tr>
 <th>Sketch</th>
 <th>Description</th>
 <th>Output Sample</th>
-<tr> -->
+<tr>
+-->
+
+<tr>
+<td>
+</td>
+<td><a href="sketch_230331a_ThreePetalRings/">sketch_230331a_ThreePetalRings</a></td>
+<td>Render multiple alpha mask layers in high resolution</td>
+</td>
+</tr>
 
 <tr>
 <td>
 </td>
 <td><a href="sketch_230330d_PaperShader/">sketch_230330d_PaperShader</a></td>
-<td>Render a high resolution shader off-screen and display it at normal screen resolution</td>
+<td>Render a shader at high resolution off-screen, and render a preview at screen resolution</td>
 </td>
 </tr>
 

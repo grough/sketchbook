@@ -1,3 +1,4 @@
+// Draw sine waves
 Saver saver;
 
 void setup() {

@@ -1,3 +1,4 @@
+// Render multiple alpha mask layers in high resolution
 import com.jogamp.opengl.GLProfile;
 {
   GLProfile.initSingleton();

@@ -1,3 +1,4 @@
+// Render multiple circular alpha masks as separate layers
 import com.jogamp.opengl.GLProfile;
 {
   GLProfile.initSingleton();

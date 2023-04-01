@@ -1,3 +1,4 @@
+// Draw parts of an audio file
 import controlP5.*;
 import grough.cubehelix.*;
 

@@ -1,5 +1,5 @@
+// Manage different sets of image sizes for screen and print
 // The Paper class is used to maintain different sets of image dimensions for screen and print
-
 Paper paper;
 PVector paperSize;
 Paper display;

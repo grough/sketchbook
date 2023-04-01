@@ -1,7 +1,4 @@
-// I want a brush
-// with a brush on it
-// The brush contains a wave
-// paints tranparent strokes over and over
+//Draw rings using trig functions with controls for rotation and oblateness
 Saver saver;
 
 Hand h1;

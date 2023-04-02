@@ -2,5 +2,5 @@
 
 dir ?= $(abspath .)
 
-toc:
-	@cd toc2html && go run main.go $(dir)
+table_of_contents:
+	@cd make_table_of_contents && go run main.go $(dir)

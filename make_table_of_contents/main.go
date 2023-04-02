@@ -26,13 +26,13 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
-	fmt.Println(html)
+	fmt.Print(html)
 }
 
 func Extract(srcDir string) ([]Entry, error) {
 	// Get the sketchbook directory path from the command line argument
 	if len(os.Args) < 2 {
-		return nil, fmt.Errorf("Usage: go run sketchbook_reader.go /path/to/sketchbook")
+		return nil, fmt.Errorf("Usage: go run main.go /path/to/sketchbook")
 	}
 	sketchbookDir := os.Args[1]
 
@@ -47,38 +47,30 @@ func Extract(srcDir string) ([]Entry, error) {
 
 	// Loop through each file in the sketchbook directory
 	for _, file := range files {
-		// Check if the file is a directory
 		if !file.IsDir() {
 			continue
 		}
-
-		// Construct the path to the sketch file and image file
+		if !strings.HasPrefix(file.Name(), "sketch_") {
+			continue
+		}
 		sketchDir := filepath.Join(sketchbookDir, file.Name())
 		sketchFile := filepath.Join(sketchDir, file.Name()+".pde")
 		imagePath := filepath.Join(sketchDir, "example.png")
 		smallImagePath := filepath.Join(sketchDir, "example-small.png")
-
-		// Read the contents of the sketch file
-		contents, err := ioutil.ReadFile(sketchFile)
+		description := "<!--no description-->"
+		content, err := ioutil.ReadFile(sketchFile)
 		if err != nil {
+			return nil, err
+		}
+		contentString := string(content)
+		endOfLine := strings.Index(contentString, "\n")
+		if endOfLine == -1 {
 			continue
 		}
-
-		// Extract the description from the sketch file
-		lines := strings.Split(string(contents), "\n")
-		var description string
-		for _, line := range lines {
-			line = strings.TrimSpace(line)
-			if strings.HasPrefix(line, "//") {
-				description = strings.TrimPrefix(line, "//")
-				description = strings.TrimSpace(description)
-				break
-			}
-		}
-
-		// Ignore sketches without a description
-		if description == "" {
-			continue
+		firstLine := string(content[:endOfLine])
+		if strings.HasPrefix(firstLine, "//") {
+			description = strings.TrimPrefix(firstLine, "//")
+			description = strings.TrimSpace(description)
 		}
 
 		// Check if the image file exists
@@ -104,7 +96,7 @@ func Format(entries []Entry) (string, error) {
   <tr>
     <th>Name</th>
     <th>Description</th>
-	<th>👁️</th>
+    <th>👁️</th>
   </tr>
   {{range .}}
   <tr>
@@ -122,7 +114,7 @@ func Format(entries []Entry) (string, error) {
 	var buf bytes.Buffer
 	err = tmpl.Execute(&buf, entries)
 	if err != nil {
-		panic(err)
+		return "", err
 	}
 
 	// Convert the buffer to a string and print it

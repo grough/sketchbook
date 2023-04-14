@@ -1,4 +1,4 @@
-.PHONY: toc # Print an HTML table of contents for the given sketchbook directory
+.PHONY: table_of_contents # Print an HTML table of contents for the given sketchbook directory
 
 dir ?= $(abspath .)
 

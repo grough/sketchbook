@@ -3,5 +3,6 @@ libraries
 modes
 templates
 tools
+web
 .DS_Store
 *.autosave

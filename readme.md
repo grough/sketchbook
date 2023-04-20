@@ -61,7 +61,8 @@
 
 ## Notes
 
-- Some of the sketches depend on one or more of these libraries: [controlP5](https://sojamo.de/libraries/controlP5/), [Cubehelix](https://github.com/grough/processing-cubehelix), [Sound](https://processing.org/reference/libraries/sound/).
-- The table of contents above can be updated by running `make table_of_contents` and copying its output into `readme.md`.
+- Some of the sketches depend on one or more of these libraries: [controlP5](https://sojamo.de/libraries/controlP5/), [Cubehelix](https://github.com/grough/processing-cubehelix), [Sound](https://processing.org/reference/libraries/sound/)
+- The table of contents above can be updated by running `make table_of_contents` and copying its output into `readme.md`
+- The website in the `web` directory can be update by running `make web`
 
 <!-- Every sketch on the main branch should be in working order. If you change a sketch, and it works, commit it. If you change a sketch, and it's broken, don't commit it. This way, you can always revert to a working state by picking a commit on the main branch. -->

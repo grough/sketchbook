@@ -57,6 +57,18 @@
     <td><a href="sketch_230331b_RingGradientMaskLayers/example.png"><img src="sketch_230331b_RingGradientMaskLayers/example-small.png" /></a></td>
   </tr>
   
+  <tr>
+    <td><a href="sketch_240508c_CubeHelixDither/">sketch_240508c_CubeHelixDither</a></td>
+    <td>Render Cubehelix color scheme with noise dithering</td>
+    <td><a href="sketch_240508c_CubeHelixDither/example.png"><img src="sketch_240508c_CubeHelixDither/example-small.png" /></a></td>
+  </tr>
+  
+  <tr>
+    <td><a href="sketch_LayeredAlphaShaderTemplate/">sketch_LayeredAlphaShaderTemplate</a></td>
+    <td>A template for rendering hi-res layered alpha masks with GLSL</td>
+    <td><!--no image--></td>
+  </tr>
+  
 </table>
 
 ## Notes

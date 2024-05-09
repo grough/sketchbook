@@ -4,7 +4,7 @@
 dir ?= $(abspath .)
 
 table_of_contents:
-	@cd make_table_of_contents && go run main.go $(dir)
+	@cd make_table_of_contents && go run main.go "$(dir)"
 
 web:
-	@cd make_web && go run main.go $(dir) $(dir)/web > $(dir)/web/index.html
+	@cd make_web && go run main.go "$(dir)" "$(dir)/web" > "$(dir)/web/index.html"

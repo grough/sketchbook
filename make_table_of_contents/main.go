@@ -3,7 +3,6 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"strings"
@@ -40,7 +39,7 @@ func Extract(srcDir string) ([]Entry, error) {
 	var entries []Entry
 
 	// Read the contents of the sketchbook directory
-	files, err := ioutil.ReadDir(sketchbookDir)
+	files, err := os.ReadDir(sketchbookDir)
 	if err != nil {
 		return nil, fmt.Errorf("Error reading directory:", err)
 	}
@@ -58,7 +57,7 @@ func Extract(srcDir string) ([]Entry, error) {
 		imagePath := filepath.Join(sketchDir, "example.png")
 		smallImagePath := filepath.Join(sketchDir, "example-small.png")
 		description := "<!--no description-->"
-		content, err := ioutil.ReadFile(sketchFile)
+		content, err := os.ReadFile(sketchFile)
 		if err != nil {
 			return nil, err
 		}

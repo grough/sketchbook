@@ -58,22 +58,22 @@
   </tr>
   
   <tr>
-    <td><a href="sketch_240508c_CubeHelixDither/">sketch_240508c_CubeHelixDither</a></td>
-    <td>Render Cubehelix color scheme with noise dithering</td>
-    <td><a href="sketch_240508c_CubeHelixDither/example.png"><img src="sketch_240508c_CubeHelixDither/example-small.png" /></a></td>
+    <td><a href="sketch_230609a_LayeredAlphaShaderTemplate/">sketch_230609a_LayeredAlphaShaderTemplate</a></td>
+    <td>A template for rendering hi-res layered alpha masks with GLSL</td>
+    <td><!--no image--></td>
   </tr>
   
   <tr>
-    <td><a href="sketch_LayeredAlphaShaderTemplate/">sketch_LayeredAlphaShaderTemplate</a></td>
-    <td>A template for rendering hi-res layered alpha masks with GLSL</td>
-    <td><!--no image--></td>
+    <td><a href="sketch_240508c_CubeHelixDither/">sketch_240508c_CubeHelixDither</a></td>
+    <td>Render Cubehelix color scheme with noise dithering</td>
+    <td><a href="sketch_240508c_CubeHelixDither/example.png"><img src="sketch_240508c_CubeHelixDither/example-small.png" /></a></td>
   </tr>
   
 </table>
 
 ## Notes
 
-- Some of the sketches depend on one or more of these libraries: [controlP5](https://sojamo.de/libraries/controlP5/), [Cubehelix](https://github.com/grough/processing-cubehelix), [Sound](https://processing.org/reference/libraries/sound/)
+- Some sketches depend on one or more of these libraries: [controlP5](https://sojamo.de/libraries/controlP5/), [Cubehelix](https://github.com/grough/processing-cubehelix), [Sound](https://processing.org/reference/libraries/sound/)
 - The table of contents above can be updated by running `make table_of_contents` and copying its output into `readme.md`
 - The website in the `web` directory can be update by running `make web`
 

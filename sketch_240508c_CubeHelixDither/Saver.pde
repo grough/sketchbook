@@ -17,7 +17,7 @@ class Saver {
     String index = nf(i, 4);
     String sketchName = sketch.toString().split("@")[0];
     String tagsString = String.join("_", tags);
-    String name = session + "_" + tagsString + "_" + index + "_" + sketchName;
+    String name = session + "_" + (tagsString.isEmpty() ? "" : tagsString + "_") + index + "_" + sketchName;
     return name + "." + extension;
   }
   
@@ -28,7 +28,8 @@ class Saver {
     return filename;
   }
   
-  String save(String extension, String[] tags, PGraphics graphics) {
+  String save(PGraphics graphics, String extension) {
+    String[] tags = {};
     String filename = this.filename(extension, tags);
     graphics.save("output/" + filename);
     i++;

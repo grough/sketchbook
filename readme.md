@@ -69,6 +69,12 @@
     <td><a href="sketch_240508c_CubeHelixDither/example.png"><img src="sketch_240508c_CubeHelixDither/example-small.png" /></a></td>
   </tr>
   
+  <tr>
+    <td><a href="sketch_240510a_SpectralWash/">sketch_240510a_SpectralWash</a></td>
+    <td>Slow colour wash</td>
+    <td><a href="sketch_240510a_SpectralWash/example.png"><img src="sketch_240510a_SpectralWash/example-small.png" /></a></td>
+  </tr>
+  
 </table>
 
 ## Notes

@@ -81,6 +81,12 @@
     <td><a href="sketch_240511a_QuantizeExample/example.png"><img src="sketch_240511a_QuantizeExample/example-small.png" /></a></td>
   </tr>
   
+  <tr>
+    <td><a href="sketch_240512a_QuantizeOffset/">sketch_240512a_QuantizeOffset</a></td>
+    <td>Bands in one dimension and smooth in the other</td>
+    <td><a href="sketch_240512a_QuantizeOffset/example.png"><img src="sketch_240512a_QuantizeOffset/example-small.png" /></a></td>
+  </tr>
+  
 </table>
 
 ## Notes

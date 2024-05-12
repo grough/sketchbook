@@ -75,6 +75,12 @@
     <td><a href="sketch_240510a_SpectralWash/example.png"><img src="sketch_240510a_SpectralWash/example-small.png" /></a></td>
   </tr>
   
+  <tr>
+    <td><a href="sketch_240511a_QuantizeExample/">sketch_240511a_QuantizeExample</a></td>
+    <td>Quantize 0..1 into bands including 0 and 1</td>
+    <td><a href="sketch_240511a_QuantizeExample/example.png"><img src="sketch_240511a_QuantizeExample/example-small.png" /></a></td>
+  </tr>
+  
 </table>
 
 ## Notes

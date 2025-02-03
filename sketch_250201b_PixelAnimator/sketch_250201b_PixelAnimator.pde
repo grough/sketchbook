@@ -1,16 +1,22 @@
 // First attempt to port my pixel animator library
 
-class MyAnimation extends Animation<Boolean> {
+class MyAnimation extends PixelAnimator<Boolean> {
   Boolean populate() {
-    return is(2, 3);
+    return false;
   }
 
   Boolean evolve() {
-    return !self();
+    if (random(0,1) < 0.005) {
+      return true;
+    }
+    if (random(0,1) < 0.05) {
+      return false;
+    }
+    return self();
   }
 
   color shade() {
-    return color((self() ? 1 : 0) * 255);
+    return color(self() ? 127 + 15 : 127 + 30);
   }
 }
 
@@ -18,12 +24,14 @@ MyAnimation animation;
 
 void setup() {
   size(540, 540);
-  noSmooth();
-  frameRate(8);
+  frameRate(12);
   animation = new MyAnimation();
-  animation.size(16, 16);
+  animation.size(24, 24);
+  animation.dimensions(540, 540);
 }
 
 void draw() {
-  image(animation.next(), 0, 0, 540, 540);
+  fill(255,0,0);
+  rect(0,0,540,540);
+  image(animation.next(), 2, 10, 540, 540);
 }

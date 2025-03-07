@@ -15,7 +15,7 @@ OpenSimplex2S noise;
 void setup() {
   noLoop();
   noSmooth();
-  outputSize = SIZE_HD_PORTRAIT;
+  outputSize = SIZE_SQUARE_2K;
   previewSize = new PVector(outputSize.x / 4, outputSize.y / 4);
   windowResize((int)previewSize.x, (int)previewSize.y);
   graphics = createGraphics((int)previewSize.x, (int)previewSize.y);
@@ -47,8 +47,8 @@ void render(PVector size, long seed) {
     for (int j = 0; j < size.y; j++) {
       NormalizedCoordinates p = normalize((int)size.x, (int)size.y, i, j);
       float dither = random(-1, 1) / 100.0;
-      float xBands = lerp(0, 1, band(p.y, 7));
-      graphics.stroke(cubehelix.color(xBands / 2 + p.x / 2 + dither));
+      float yBands = band(p.y, 7);
+      graphics.stroke(cubehelix.color(yBands / 2 + p.x / 2 + dither));
       graphics.point(i, j);
     }
   }

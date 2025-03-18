@@ -1,10 +1,7 @@
-// Draw sine waves
-Saver saver;
-
+// Draw sine wavesSaver saver;
 void setup() {
   size(640, 640);
   frameRate(8);
-  saver = new Saver(this);
 }
 
 float ph = 0;
@@ -32,9 +29,5 @@ void draw() {
 }
 
 void mouseClicked() {
-  //String file = "output/" + stamp() + ".png";
-  //save(file);
-  println(saver.save("png"));
-  //println(file);
   loop();
 }
